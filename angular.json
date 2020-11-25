@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-drinkstir": {
+    "drinkstir": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-drinkstir",
+            "outputPath": "dist/drinkstir",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-drinkstir:build"
+            "browserTarget": "drinkstir:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-drinkstir:build:production"
+              "browserTarget": "drinkstir:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-drinkstir:build"
+            "browserTarget": "drinkstir:build"
           }
         },
         "test": {
@@ -113,16 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-drinkstir:serve"
+            "devServerTarget": "drinkstir:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-drinkstir:serve:production"
+              "devServerTarget": "drinkstir:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-drinkstir"
+  "defaultProject": "drinkstir",
+  "cli": {
+    "analytics": "5f40e23f-5e51-4b80-ae7a-d0f065e6bcb0"
+  }
 }

@@ -1,0 +1,57 @@
+.Welcome{
+ 
+ 
+ 
+  margin-top: 300px;
+  margin-left: -100px;
+  text-align: center;
+  justify-content: center;
+}
+
+.table{
+  float: center;
+  margin: auto;
+  justify-content: center;
+ 
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px; }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  background-color: #3B3D45;
+  border:2px solid #3B3D45;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}.button:link, .button:visited {
+  background-color: #6DDEEB;
+  color: black;
+  padding: 25px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover, .button:active {
+  background-color: #6DDEEB;
+  opacity: .7;
+}

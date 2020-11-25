@@ -1,0 +1,143 @@
+<body>
+
+<div class = "title">
+
+<h1>All</h1>
+
+<button (click) = "getCategory()">By Category</button>
+<button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=')">All</button>
+
+</div>
+
+<div id = "Category">
+<div class = "table" >
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "">Ordinary Drink</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button id = "Ordinary_Drink" (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Ordinary_Drink')">View Drinks</button></p>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "">Cocktail</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/qyyvtu1468878544.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Cocktail')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Milk/Float/Shake">Milk/Float/Shake</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/rvwrvv1468877323.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Milk / Float / Shake')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Other/Unknown">Other/Unknown</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/tqxyxx1472719737.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Other/Unknown')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Cocoa">Cocoa</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/3nbu4a1487603196.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Cocoa')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Shot">Shot</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/uxywyw1468877224.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Shot')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Coffee / Tea">Coffee / Tea</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/vyrurp1472667777.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Coffee / Tea')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Homemade Liqueur">Homemade Liqueur</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/uxxtrt1472667197.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Homemade Liqueur')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Punch / Party Drink">Punch / Party Drink</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/tpxurs1454513016.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Punch / Party Drink')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Beer">Beer</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/xxyywq1454511117.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Beer')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <h2 style="text-align:center" class = "catTitle" id = "Soft Drink / Soda">Soft Drink / Soda</h2>
+        <div class="card">
+        <img src="https://www.thecocktaildb.com/images/media/drink/qxrvqw1472718959.jpg" alt="" style="width:100%" class = "cthumbnail" id= "">
+        <p><button (click) = "createCardElem('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=Soft Drink / Soda')">View Drinks</button></p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+<div class = "table" id = "table" display = "block">
+
+
+
+
+</div>
+
+
+
+
+</body>

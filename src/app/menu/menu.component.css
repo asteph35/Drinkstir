@@ -1,0 +1,12 @@
+*{transition:all 0.3s ease-in-out;}
+
+.logo-container{
+  clear:both;
+  overflow:auto;
+}
+
+.logo img{float:left;
+  height: 47px;
+  width: 100px;
+
+}

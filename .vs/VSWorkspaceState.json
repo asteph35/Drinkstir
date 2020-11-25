@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\api",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\all",
+    "\\src\\app\\featured",
+    "\\src\\app\\homepage",
+    "\\src\\app\\menu",
+    "\\src\\app\\my-bar",
+    "\\src\\app\\recipes"
+  ],
+  "SelectedNode": "\\angular.json",
+  "PreviewInSolutionExplorer": false
+}

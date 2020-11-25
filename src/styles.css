@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+
+    background-color:lightgray;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+    li a {
+      display: block;
+      color:white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  
+      li a:hover {
+        background-color: #111;
+        color: #6DDEEB;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        background-color: white;
+      }
+      
+      .text{
+    
+        background-color: white;
+      }
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+      
+      .card button:hover {
+        opacity: 0.7;
+      }
+      
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px; }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.title{
+  text-align: center;
+
+}
