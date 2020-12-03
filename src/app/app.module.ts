@@ -13,6 +13,16 @@ import { CardsComponent } from './cards/cards.component';
 import {AccountComponent} from './account/account.component';
 import {IngredientComponent } from './ingredient/ingredient.component';
 import {CocktailComponent} from './cocktail/cocktail.component';
+import { RouterModule } from '@angular/router';
+
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './auth.service';
+import {UserService} from './user.service';
+import {LogoutComponent} from './logout/logout.component';
+import { UserAccComponent} from './user-acc/user-acc.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 @NgModule({
@@ -27,15 +37,50 @@ import {CocktailComponent} from './cocktail/cocktail.component';
     CardsComponent,
     IngredientComponent,
     AccountComponent,
-    CocktailComponent
+    CocktailComponent,
+  
+    LogoutComponent,
+    UserAccComponent,
+    LoginComponent,
+    RegisterComponent
+    
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+   RouterModule.forRoot([
+      {
+        path: '',
+        component: HomepageComponent
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path:'register',
+        component: RegisterComponent
+      },
+      {
+        path: 'user',
+        component: UserAccComponent,
+        canActivate: [AuthGuard]
+       
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+       
+      }
+
+
+    ])
+    
   ],
-  providers: [],
+  providers: [AuthGuard, UserService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

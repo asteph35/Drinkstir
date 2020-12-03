@@ -6,7 +6,9 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { MyBarComponent } from './my-bar/my-bar.component';
 import { FeaturedComponent } from './featured/featured.component';
 import {AccountComponent} from './account/account.component';
+import { AuthGuard } from './auth.guard';
 
+import { UserAccComponent} from './user-acc/user-acc.component';
 const routes: Routes = [
   {
     path: '', redirectTo: '/homepage', pathMatch: 'full' 
@@ -39,8 +41,10 @@ const routes: Routes = [
   },
   {
     path: 'account',
-    component: AccountComponent
+    component: AccountComponent,
+   
   }
+ 
  
 
 ];
