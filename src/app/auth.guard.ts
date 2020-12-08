@@ -24,6 +24,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate<u
     }
    
     return this.user.isLoggedIn().pipe(map(res =>{
+     console.log(res.status)
      if(res.status){
        this.auth.setLoggedIn(true);
        return true;

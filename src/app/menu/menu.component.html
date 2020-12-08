@@ -2,17 +2,25 @@
 
 <div class="logo-container">
   <div class="logo">
-    <img src="./assets/pics/logo.png" alt="" /></div>
+  <img src="./assets/pics/logo.png" alt="" /></div>
+
 <nav>
 
-  <ul>
+
+  <ul class = "menu-bar">
     <li><a [routerLink]="['/homepage']" class = "Home">Home</a></li>
     <li><a [routerLink]="['/my-bar']"class = "MyBar">MyBar</a></li>
     <li><a [routerLink]="['/recipes']"class = "Recipes">Recipes</a></li>
     <li><a [routerLink]="['/all']"class = "All">All</a></li>
     <li><a [routerLink]="['/featured']"class = "Featured">Featured</a></li>
-    <li><a [routerLink]="['/account']"class = "Account">Account</a></li>
+    <div id = account>
+      <li><a  routerLink= "/logout" class = "button">Logout</a></li>
+    
+  </div>
+    <div id = logout display = "none">
+      <li><a [routerLink]="['/account']"class = "Account">Account</a></li>
+  </div>
   </ul>
 
 </nav>
-</div>
+ </div> 

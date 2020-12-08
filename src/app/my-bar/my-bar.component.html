@@ -1,10 +1,42 @@
 
 <h2 style="text-align:center">MyBar</h2>
-
+<div class = "table" >
+  <div class="row">
+    <div class="column">
 <div class="card">
   <img src="assets/pics/add.PNG" alt="Add Ingredient" style="width:100%" >
-  <p><button>Add Ingredient</button></p>
+  <p><button class="open-button" (click)= "openForm()">Add Ingredient</button></p>
 
 
+</div>
+<div class = "insert">
 
+</div>
+</div>
+</div>
+
+  <div id = "popup" >
+ 
+  
+  <div class="form-popup" id="myForm">
+    <form (submit) ="addIngredient($event)"  class="form-container">
+      <h1>Ingredient</h1>
+  
+      <label for="ingredient"><b>Ingredient name</b></label>
+      <input type="text" placeholder="Start Typing here. . ." id = "ing" name="ingredient" required>
+  
+    
+      <button type="submit" class="btn">Add</button>
+      <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+  </div>
+</div>
+
+
+<br><br>
+
+
+<div id = "list">{{ingredients}}</div>
+<div id = "message"> {{message}} by {{email}}
+    
 </div>

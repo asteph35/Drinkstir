@@ -127,5 +127,10 @@
   "defaultProject": "drinkstir",
   "cli": {
     "analytics": "5f40e23f-5e51-4b80-ae7a-d0f065e6bcb0"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }

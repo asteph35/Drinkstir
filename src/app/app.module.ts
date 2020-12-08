@@ -64,17 +64,18 @@ import { RegisterComponent } from './register/register.component';
         path:'register',
         component: RegisterComponent
       },
-      {
-        path: 'user',
-        component: UserAccComponent,
-        canActivate: [AuthGuard]
-       
-      },
+     
       {
         path: 'login',
         component: LoginComponent
        
-      }
+      },
+      {
+        path: 'my-bar',
+        component: MyBarComponent,
+        canActivate: [AuthGuard]
+       
+      },
 
 
     ])

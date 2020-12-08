@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
     const username = target.querySelector('#username').value;
     const password = target.querySelector('#password').value;
     const cpassword = target.querySelector('#cpassword').value;
+    console.log(username, password)
    if (password != cpassword){
       errors.push("Passwords do not match");
    }

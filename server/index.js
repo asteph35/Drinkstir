@@ -5,7 +5,7 @@ const app = express()
 const session = require('express-session')
 const mongoose = require('mongoose')
 
-
+const MongoClient = require('mongodb').MongoClient;
 app.use(session({
 	
 	
@@ -15,10 +15,16 @@ app.use(session({
 }))
 mongoose.Promise = Promise
 mongoose.connect('mongodb://localhost:27017/angulardb')
+
+
 .then(() => console.log('Mongoose up'))
 
 const User = require('./models/users')
 app.use(bodyParser.json())
+
+const dbName = 'angulardb';
+
+
 
 
 app.post('/api/login',async (req, res) =>{
@@ -91,15 +97,36 @@ app.get('/api/data', async(req,res) => {
 	}
 	res.json({
 		status: true,
-		email: req.session.user
+		email: req.session.user,
+		ingredients: user.ingredients
+		
 	})
 		
 
+
 })
 app.get('/api/logout', (req, res) => {
+	
 	req.session.destroy()
 	res.json({
 		success: true
 	})
+})
+app.post('/api/ingredient', async(req, res, client) => {
+	
+const user = await User.findOne({email: req.session.user})
+const {ingredient} = req.body
+
+	
+	user.ingredients.push(ingredient)
+	user.save()
+res.json({
+		success: true,
+		message: user.password
+	})
+
+
+	
+
 })
 app.listen(1234, () => console.log('Server listening at 1234')) 

@@ -55,3 +55,11 @@
   background-color: #6DDEEB;
   opacity: .7;
 }
+ body {
+  background: url("https://cdn.vox-cdn.com/thumbor/vCPk3QDZyhZR3k95ZQnnJL51v9I=/0x0:2600x1733/1400x1050/filters:focal(1092x659:1508x1075):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/66554227/shutterstock_616076909.0.jpg") center / cover no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  

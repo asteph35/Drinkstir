@@ -36,4 +36,10 @@ getUserDetails(email: string, password: string){
       password
     })
   }
+  addUserIngredient(ingredient: any){
+    return this.http.post<registerResponse>('/api/ingredient', {
+     ingredient
+    })
+   
+  }
 }
