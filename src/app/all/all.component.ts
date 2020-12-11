@@ -12,6 +12,7 @@ import { Cocktail } from '../cocktail/cocktail';
 
 export class AllComponent {
   readonly ROOT_URL = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=";
+  readonly baseURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="
   cocktails: Cocktail[] = [];
   
   constructor(private http: HttpClient){

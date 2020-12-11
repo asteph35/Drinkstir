@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
+import { catchError } from 'rxjs/operators';
+
 import {AuthService} from '../auth.service';
 import {UserService} from '../user.service';
 @Component({
@@ -26,6 +28,19 @@ export class MyBarComponent implements OnInit {
       
         this.email = data.email
         this.ingredients = data.ingredients
+        var HTML = "<table border=1 width=100%><tr><th>Ingredients</th></tr>"
+         for(var i =0; i < this.ingredients.length; i++){
+           HTML += '<tr><td>'+ this.ingredients[i]+'</td></tr>'
+         
+     
+         } 
+         try{
+        document.getElementById("entry").innerHTML += HTML
+         }
+         catch(err){
+
+         }
+
         }if(data.status == false){
           this.router.navigate(['logout'])
         }
@@ -55,7 +70,7 @@ export class MyBarComponent implements OnInit {
     
     this.auth.addUserIngredient(ingredient).subscribe(data => {
       console.log(ingredient)
-
+     
       
     })
     

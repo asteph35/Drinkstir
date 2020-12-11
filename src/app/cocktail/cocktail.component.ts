@@ -26,11 +26,16 @@ export class CocktailComponent implements OnInit {
   strIngredient13 ="";
   strIngredient14 ="";
   strIngredient15 ="";
-  Ingredients = [""];
+  Ingredients: string[];
  
-  constructor() { }
+  constructor() {
+ 
+
+   }
 
   ngOnInit(): void {
+    
+
   }
  
   compileIngredients(){
@@ -49,6 +54,9 @@ export class CocktailComponent implements OnInit {
       this.Ingredients[12] = this.strIngredient13;
       this.Ingredients[13] = this.strIngredient14;
       this.Ingredients[14] = this.strIngredient15;
+      this.Ingredients.forEach(element => {
+        console.log(element)
+      });
       this.deNullify();
   }
   deNullify(){

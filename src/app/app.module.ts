@@ -76,6 +76,12 @@ import { RegisterComponent } from './register/register.component';
         canActivate: [AuthGuard]
        
       },
+      {
+        path: 'recipes',
+        component: RecipesComponent,
+        canActivate: [AuthGuard]
+       
+      },
 
 
     ])
