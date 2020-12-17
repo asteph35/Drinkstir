@@ -19,17 +19,8 @@ const routes: Routes = [
     component: HomepageComponent,
     pathMatch: 'full'
   },
-  {
-    path: 'my-bar',
-    component: MyBarComponent
   
-  },
-
-  {
-    path: 'recipes',
-    component: RecipesComponent
-  },
-
+  
   {
     path: 'all',
     component: AllComponent

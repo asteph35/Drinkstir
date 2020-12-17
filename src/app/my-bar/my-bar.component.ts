@@ -16,7 +16,7 @@ export class MyBarComponent implements OnInit {
   ingredients = ["Getting your ingredients"]
   constructor(private user: UserService,private auth: AuthService, private router: Router) { }
 
-  ngOnInit(){
+  ngOnInit(): void{
 
     if (!this.user.isLoggedIn()){
       this.router.navigate(['account'])
@@ -35,7 +35,11 @@ export class MyBarComponent implements OnInit {
      
          } 
          try{
-        document.getElementById("entry").innerHTML += HTML
+       var entry=  document.getElementById('entry')
+       if(entry != null){
+        entry.innerHTML+= HTML
+       }
+     
          }
          catch(err){
 

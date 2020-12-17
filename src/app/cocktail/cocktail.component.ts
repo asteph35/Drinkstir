@@ -26,7 +26,7 @@ export class CocktailComponent implements OnInit {
   strIngredient13 ="";
   strIngredient14 ="";
   strIngredient15 ="";
-  Ingredients: string[];
+  
  
   constructor() {
  
@@ -38,32 +38,6 @@ export class CocktailComponent implements OnInit {
 
   }
  
-  compileIngredients(){
-      this.Ingredients[0] = this.strIngredient1;
-      this.Ingredients[1] = this.strIngredient2;
-      this.Ingredients[2] = this.strIngredient3;
-      this.Ingredients[3] = this.strIngredient4;
-      this.Ingredients[4] = this.strIngredient5;
-      this.Ingredients[5] = this.strIngredient6;
-      this.Ingredients[6] = this.strIngredient7;
-      this.Ingredients[7] = this.strIngredient8;
-      this.Ingredients[8] = this.strIngredient9;
-      this.Ingredients[9] = this.strIngredient10;
-      this.Ingredients[10] = this.strIngredient11;
-      this.Ingredients[11] = this.strIngredient12;
-      this.Ingredients[12] = this.strIngredient13;
-      this.Ingredients[13] = this.strIngredient14;
-      this.Ingredients[14] = this.strIngredient15;
-      this.Ingredients.forEach(element => {
-        console.log(element)
-      });
-      this.deNullify();
-  }
-  deNullify(){
-    this.Ingredients = this.Ingredients.filter(function (el){
-      return el !=null;
-    });
-    
-  }
+ 
   
 }
